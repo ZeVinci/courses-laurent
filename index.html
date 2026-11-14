@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les courses de Laurent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="top-row">
+        <div class="title">
+          <p class="eyebrow" id="eyebrow">Courses de Laurent</p>
+          <h1>Mes<br>dossards</h1>
+        </div>
+        <div class="hero" id="hero" aria-live="polite"></div>
+      </div>
+      <div class="toolbar">
+        <nav class="tabs" aria-label="Vue">
+          <a href="#" data-view="list" aria-current="page">Courses</a>
+          <a href="#donnees" data-view="data">Données</a>
+        </nav>
+        <div class="filters" id="filters">
+          <div class="cats" role="group" aria-label="Filtrer par catégorie" id="cats"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="list" aria-busy="true">
+      <p class="loading">Chargement…</p>
+    </main>
+
+    <main id="data" class="viz" hidden></main>
+
+    <div class="modal" id="modal" hidden>
+      <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="m-title" id="sheet"></div>
+    </div>
+
+    <footer class="foot">
+      <p>Résultats issus des classements officiels (Fédération française de triathlon, FFA, Livetrail, Betrail, Runnerbreizh, Kikourou). Fond de carte © contributeurs OpenStreetMap.</p>
+    </footer>
+  </div>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
